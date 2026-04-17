@@ -1,0 +1,7 @@
+Package: avahi-alias
+Architecture: all
+Maintainer: maddsua
+Section: net
+Priority: optional
+Description: A dumb easy script to get avahi to publish multiple names automatically
+Depends: avahi-daemon, avahi-utils

@@ -1,0 +1,15 @@
+[Unit]
+Description=Dynamic Avahi Alias for %I
+After=avahi-daemon.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=avahi
+Group=avahi
+ExecStart=/usr/local/bin/avahi-alias.sh %I
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
